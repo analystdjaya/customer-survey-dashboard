@@ -28,7 +28,7 @@ document.getElementById('access-form').addEventListener('submit',async e=>{
  e.preventDefault();const input=document.getElementById('access-code'),code=input.value.trim();
  const button=document.getElementById('access-button'),err=document.getElementById('gate-error');err.hidden=true;
  try{await manifestReady}catch(ex){err.textContent='Konfigurasi akses belum tersedia.';err.hidden=false;return}
- if(!/^[A-Z2-9]{5}$/.test(code)){err.textContent='Masukkan tepat 5 karakter: huruf kapital atau angka 2–9.';err.hidden=false;return}
+ if(!/^[A-Z0-9]{5}$/.test(code)){err.textContent='Masukkan tepat 5 karakter: huruf kapital atau angka 0–9.';err.hidden=false;return}
  button.disabled=true;button.textContent='Memeriksa kode…';
  try{
   let data=null;
