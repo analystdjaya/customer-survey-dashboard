@@ -21,7 +21,7 @@ async function enterDashboard(data){
  const app=document.getElementById('app');app.hidden=false;
  // Only plaintext of the selected scope exists in memory. Never store it in localStorage.
  window.__CSS_PREVIEW_DATA__=data;
- const s=document.createElement('script');s.src='app.js';s.onerror=()=>{app.textContent='Gagal memuat dashboard.'};document.body.append(s);
+ const s=document.createElement('script');s.src='app.js?v=3';s.onerror=()=>{app.textContent='Gagal memuat dashboard.'};document.body.append(s);
 }
 document.getElementById('show-code').addEventListener('change',e=>{document.getElementById('access-code').type=e.target.checked?'text':'password'});
 document.getElementById('access-form').addEventListener('submit',async e=>{
