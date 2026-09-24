@@ -185,6 +185,13 @@ function renderFrame(){
   menu.querySelector('[data-ok]').addEventListener('click',()=>applyFilter(id));
  }
  $('#download').addEventListener('click',downloadExcel);
+ $('#logout').addEventListener('click', () => {
+  window.__CSS_PREVIEW_DATA__ = null;
+  payload = null;
+  window.location.replace(
+    new URL('./?logout=' + Date.now(), window.location.href).href
+  );
+});
 }
 function onFilterEscape(e){if(e.key==='Escape')for(const id of ['unit','type','customer'])closeFilter(id)}
 function applyFilter(id){
