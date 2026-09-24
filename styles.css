@@ -19,3 +19,37 @@
 @media(max-width:650px){.filter-menu,.filter.sold .filter-menu{min-width:min(310px,90vw);left:0;right:auto}}
 
 .kpi-icon svg{width:40px;height:40px;display:block;margin:0 auto}.kpi-icon{display:flex;align-items:center;justify-content:center}
+/* Dashboard logout button */
+.logout {
+  border: 1px solid #ffffff80;
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 11px 15px;
+  min-height: 49px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background: #ffffff24;
+}
+
+/* Centered diagonal confidential watermark */
+.watermark {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-23deg);
+  font-size: clamp(25px, 6vw, 92px);
+  letter-spacing: clamp(1px, 0.3vw, 5px);
+  max-width: 90vw;
+  font-weight: 800;
+  color: #687280;
+  opacity: 0.075;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 2;
+}
